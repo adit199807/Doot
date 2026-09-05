@@ -1,6 +1,7 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import SystemMessage, HumanMessage
+from Schemas import GraderDTO
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
@@ -8,9 +9,9 @@ import os
 
 load_dotenv()
 
-class GraderDTO(BaseModel):
-    documentGraded:bool =Field(description='assign boolean value '
-    'if document is relevant to user question')
+# class GraderDTO(BaseModel):
+#     documentGraded:bool =Field(description='assign boolean value '
+#     'if document is relevant to user question')
 
 graderPrompt = ChatPromptTemplate.from_messages([
     SystemMessage(content="""You are a smart analyst, please grade 
@@ -19,7 +20,7 @@ graderPrompt = ChatPromptTemplate.from_messages([
     MessagesPlaceholder("document")
 ]) 
 llm = ChatOpenAI(model=os.environ.get('MINI_MODEL', ''))
-llmgrader = llm.with_structured_output(schema=GraderDTO)
+llmgrader = llm.with_structured_output(schema=GraderDTO.GraderDTO)
 
 graderChain = graderPrompt | llmgrader
 
