@@ -1,4 +1,4 @@
-from Graphs.State import GraphState
+from Graph.State import GraphState
 from Ingestion import retriever
 from typing import Dict, Any
 from dotenv import load_dotenv

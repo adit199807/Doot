@@ -4,7 +4,7 @@ from firecrawl import Firecrawl
 import markdown
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-from Graphs.State import GraphState
+from Graph.State import GraphState
 from langchain_core.documents import Document
 
 

@@ -1,5 +1,5 @@
-from Graphs.State import GraphState
-from Graphs.Chains.GraderChain import graderChain
+from Graph.State import GraphState
+from Graph.Chains.GraderChain import graderChain
 from Schemas import GraderDTO
 
 
