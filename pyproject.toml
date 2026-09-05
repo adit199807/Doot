@@ -5,5 +5,36 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "langchain>=1.4.0",
+    "asyncio>=4.0.0",
+    "certifi>=2026.7.22",
+    "dotenv>=0.9.9",
+    "beautifulsoup4",
+    'black',
+    'tiktoken',
+    'openai',
+    'unstructured',
+    'nltk',
+    'fastapi',
+    'jinja2',
+    'uvicorn',
+    'streamlit',
+    'streamlit-chat',
+    'tqdm',
+    'isort',
+    'langchainhub',
+    'firecrawl-py',
+    'langchain-community',
+    'langsmith',
+    'pillow',
+    'certifi',
+    'langchain-chroma',
+    'python-dotenv',
+    'langchain-tavily',
+    'langchain-pinecone',
+    "langchain-text-splitters>=1.1.2",
+    "langchain-firecrawl>=0.1.0",
+    "markdown>=3.10.3",
 ]
+
+[tool.uv]
+package = true
